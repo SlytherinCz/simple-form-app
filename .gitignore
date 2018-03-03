@@ -3,3 +3,4 @@
 assets/stylesheets/vendor
 node_modules
 tmp
+public
