@@ -1,0 +1,26 @@
+<form ng-submit="submitForm()">
+    <label for="name">Jméno
+        <input ng-model="name" id="name">
+    </label>
+
+    <label for="surname">Příjmení
+        <input ng-model="surname" id="surname">
+    </label>
+
+    <label for="genderM">Muž
+        <input type="radio" name="gender" ng-model="gender" value="male" id="genderM"/>
+    </label>
+    <label for="genderF">Žena
+        <input type="radio" name="gender" ng-model="gender" value="female" id="genderF"/>
+    </label>
+
+    <label for="ageCategory">Věková kategorie
+        <select ng-options="ageCategory as ageCategory.label for ageCategory in ageCategories track by ageCategory.id" ng-model="selectedAge" id="ageCategory"></select>
+    </label>
+
+    <label for="hobby">
+        <input type="text" ng-model="hobby" id="hobby"/>
+    </label>
+
+    <input type="submit">Odeslat</input>
+</form>
