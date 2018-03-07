@@ -1,0 +1,7 @@
+.container-centered {
+  @extend .col-xs-12;
+  @extend .col-md-6;
+  @extend .col-md-offset-3;
+  @extend .col-lg-4;
+  @extend .col-lg-offset-4;
+}

@@ -9,8 +9,7 @@ module.exports = function(grunt) {
                     'node_modules/angular-resource/angular-resource.js',
                     'node_modules/angular-mocks/angular-mocks.js',
                     'node_modules/ngstorage/ngStorage.js',
-                    'node_modules/angular-uuid/angular-uuid.js',
-                    'node_modules/angular-input-dropdown/inputDropdown.js'
+                    'node_modules/angular-uuid/angular-uuid.js'
                 ],
                 dest: 'tmp/assets.js'
             },
@@ -47,7 +46,7 @@ module.exports = function(grunt) {
         copy : {
             bootstrap: {
                 files:[
-                    {expand:true,cwd:'node_modules/bootstrap-sass-grid/sass',src: ['**'], dest: 'assets/stylesheets/vendor'}
+                    {expand:true,cwd:'node_modules/bootstrap-sass/assets/stylesheets',src: ['**'], dest: 'assets/stylesheets/vendor'}
                 ]
             }
         },
@@ -67,7 +66,7 @@ module.exports = function(grunt) {
                 tasks: ['ngtemplates', 'concat','clean']
             },
             stylesheets : {
-                files: ['assets/stylesheets/*.scss'],
+                files: ['assets/stylesheets/**/*.scss'],
                 tasks: ['sass:dist']
             }
         }

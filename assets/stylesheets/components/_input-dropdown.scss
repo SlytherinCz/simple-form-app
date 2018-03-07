@@ -1,0 +1,20 @@
+.input-dropdown {
+  @extend .form-group
+}
+
+.input-dropdown input[type='text'] {
+  @extend .form-control
+}
+
+.input-dropdown ul {
+  /* Style the dropdown list */
+}
+
+.input-dropdown ul > li {
+  /* Style the dropdown list item */
+}
+
+.input-dropdown ul > li.active {
+  /* Style the dropdown list item when active.
+    The active class is added to an item on mouse over or when it's selected with the arrow keys. */
+}

@@ -1,26 +1,66 @@
-<form ng-submit="submitForm()">
-    <label for="name">Jméno
-        <input ng-model="name" id="name">
-    </label>
+<div class="container-centered">
+    <form ng-submit="submitForm()">
+        <div class="row">
+            <div class="col-xs-6">
+                <label for="name">Jméno</label>
+                <input class="form-control" ng-model="name" id="name">
+            </div>
+            <div class="col-xs-6">
+                <label for="surname">Příjmení</label>
+                <input class="form-control" ng-model="surname" id="surname">
+            </div>
+        </div>
 
-    <label for="surname">Příjmení
-        <input ng-model="surname" id="surname">
-    </label>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="radio">
+                    <label for="genderM">
+                        <input type="radio" name="gender" ng-model="gender" value="male" id="genderM"/>
+                        Muž
+                    </label>
+                </div>
+                <div class="radio">
+                    <label for="genderF">
+                        <input type="radio" name="gender" ng-model="gender" value="female" id="genderF"/>
+                        Žena
+                    </label>
+                </div>
+            </div>
+        </div>
 
-    <label for="genderM">Muž
-        <input type="radio" name="gender" ng-model="gender" value="male" id="genderM"/>
-    </label>
-    <label for="genderF">Žena
-        <input type="radio" name="gender" ng-model="gender" value="female" id="genderF"/>
-    </label>
+        <div class="row">
+            <div class="col-xs-12">
+                <label for="ageCategory">Věková kategorie
+                    <select
+                        class="form-control"
+                        ng-options="ageCategory as ageCategory.label for ageCategory in ageCategories track by ageCategory.value"
+                        ng-model="selectedAgeCategory"
+                        ng-change="selectAgeCategory()"
+                        id="ageCategory"
+                    >
+                    </select>
+                </label>
+            </div>
+        </div>
 
-    <label for="ageCategory">Věková kategorie
-        <select ng-options="ageCategory as ageCategory.label for ageCategory in ageCategories track by ageCategory.id" ng-model="selectedAge" id="ageCategory"></select>
-    </label>
+        <div class="row">
+            <div class="col-xs-12">
+                <label for="hobby"> Hobby
+                    <input-dropdown
+                        ng-model="selectedHobby"
+                        suggestions="suggestedHobbies"
+                        filter-method="filterSuggestedHobbies(userInput)"
+                        id="hobby"/>
+                </label>
+            </div>
+        </div>
 
-    <label for="hobby">
-        <input type="text" ng-model="hobby" id="hobby"/>
-    </label>
+        <div class="row">
+            <div class="col-xs-12">
+                <input class="btn btn-primary" type="submit" value="Odeslat"/>
+            </div>
+        </div>
 
-    <input type="submit">Odeslat</input>
-</form>
+
+    </form>
+</div>

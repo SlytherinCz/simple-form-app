@@ -1,1 +1,1 @@
-var SimpleFormApp = angular.module('simpleFormApp', ['ngRoute', 'ngResource', 'ngMockE2E', 'ngStorage','angular-uuid','inputDropdown']);
+var SimpleFormApp = angular.module('simpleFormApp', ['ngRoute', 'ngResource', 'ngMockE2E', 'ngStorage','angular-uuid']);

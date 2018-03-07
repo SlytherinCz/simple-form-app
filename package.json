@@ -1,16 +1,20 @@
 {
   "name": "simple-form-app",
   "version": "0.0.1",
+  "repository" :
+    { "type" : "git"
+    , "url" : "https://github.com/SlytherinCz/simple-form-app.git"
+    },
   "dependencies": {
     "angular": "1.6.9",
-    "angular-input-dropdown": "git+https://github.com/hannaholl/angular-input-dropdown.git#515c10f",
     "angular-mocks": "1.6.9",
     "angular-resource": "1.6.9",
     "angular-route": "1.6.9",
     "angular-sanitize": "1.6.9",
     "angular-uuid": "0.0.4",
-    "bootstrap-sass-grid": "4.0.1",
-    "ngstorage": "0.3.11"
+    "ngstorage": "0.3.11",
+    "qs": "^1.0.0",
+    "bootstrap-sass": "3.3.7"
   },
   "devDependencies": {
     "grunt": "0.4.5",
@@ -24,5 +28,8 @@
     "grunt-contrib-copy": "1.0.0",
     "grunt-contrib-uglify-es": "3.3.0",
     "grunt-contrib-cssmin": "2.2.1"
+  },
+  "scripts": {
+    "postinstall": "node_modules/.bin/grunt post-install"
   }
 }
